@@ -22,4 +22,10 @@
         android:name="com.capstonedesign.summervacation.ui.slideshow.SlideshowFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_slideshow" />
+
+    <fragment
+        android:id="@+id/nav_slideshow2"
+        android:name="com.capstonedesign.summervacation.ui.slideshow2.SlideshowFragment2"
+        android:label="@string/menu_slideshow2"
+        tools:layout="@layout/fragment_slideshow2" />
 </navigation>
