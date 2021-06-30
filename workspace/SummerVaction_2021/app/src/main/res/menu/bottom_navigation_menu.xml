@@ -8,20 +8,20 @@
         android:icon="@drawable/money"
         android:enabled="true"
         android:checked="true"
-        android:title="리스트" />
+        android:title="입출금 관리" />
     <item android:id="@+id/tab2"
         app:showAsAction="always"
-        android:icon="@drawable/daymonth"
+        android:icon="@drawable/calendar"
         android:enabled="true"
-        android:title="기록"/>
+        android:title="일별 사용 내역"/>
     <item android:id="@+id/tab3"
         app:showAsAction="always"
-        android:icon="@drawable/type"
+        android:icon="@drawable/pie_chart"
         android:enabled="true"
-        android:title="더보기"/>
+        android:title="종류별 사용 내역"/>
     <item android:id="@+id/tab4"
         app:showAsAction="always"
-        android:icon="@drawable/graph"
+        android:icon="@drawable/poll_chart"
         android:enabled="true"
-        android:title="그루세룽"/>
+        android:title="사용 내역 비교"/>
 </menu>
