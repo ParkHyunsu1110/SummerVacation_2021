@@ -53,7 +53,7 @@ public class Fragment1 extends Fragment {
 
                         try {
                             Date d = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault()).parse(year+"-"+(month+1)+"-"+dayOfMonth);
-                            mTxtDate.setText(year +"/" + (month+1) + "/" + dayOfMonth);
+                            mTxtDate.setText(" " + year +"/" + (month+1) + "/" + dayOfMonth);
                         } catch (Exception e) {
                             // TODO: handle exception
                             e.printStackTrace();
