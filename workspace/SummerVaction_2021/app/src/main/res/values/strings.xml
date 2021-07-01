@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">SummerVaction_2021</string>
+    <string name="app_name">정리하러 가계</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

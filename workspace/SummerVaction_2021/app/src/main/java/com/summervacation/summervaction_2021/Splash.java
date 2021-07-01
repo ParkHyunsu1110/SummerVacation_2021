@@ -11,12 +11,10 @@ public class Splash extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
-        setContentView(R.layout.activity_splash);
+        setContentView(R.layout.activity_splash);   //연결 xml => activity_splash.xml
 
         Handler hd = new Handler();
-        hd.postDelayed(new splashhandler(), 3000); // 1초 후에 hd handler 실행  3000ms = 3초
-
+        hd.postDelayed(new splashhandler(), 3000);  // 1초 후에 hd handler 실행  3000ms = 3초
     }
 
     private class splashhandler implements Runnable{
@@ -27,8 +25,5 @@ public class Splash extends Activity {
     }
 
     @Override
-    public void onBackPressed() {
-        //초반 플래시 화면에서 넘어갈때 뒤로가기 버튼 못누르게 함
-    }
-
+    public void onBackPressed() {}  //초반 플래시 화면에서 넘어갈때 뒤로가기 버튼 못누르게 함
 }
