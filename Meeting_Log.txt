@@ -21,4 +21,5 @@
 
  - 2021.07.02
  <UI 제작>
- Fragment1 -> Dialog 제작할 예정.
+ Fragment1 -> Dialog 제작 완료.
+

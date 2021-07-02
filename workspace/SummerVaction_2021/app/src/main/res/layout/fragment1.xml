@@ -89,7 +89,7 @@
         </RadioGroup>
 
         <Button
-            android:id="@+id/kind"
+            android:id="@+id/kindBtn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:text="종류" />
@@ -99,6 +99,7 @@
             android:layout_height="wrap_content" />
 
         <Button
+            android:id="@+id/saveBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="45dp"
