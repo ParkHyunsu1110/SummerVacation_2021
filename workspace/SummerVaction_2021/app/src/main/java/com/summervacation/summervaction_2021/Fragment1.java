@@ -33,9 +33,9 @@ public class Fragment1 extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         viewGroup = (ViewGroup) inflater.inflate(R.layout.fragment1,container,false);
-
         ct = container.getContext();
 
+        //할당
         mTxtDate = viewGroup.findViewById(R.id.text);
 
         nowBtn = viewGroup.findViewById(R.id.btnNow);
