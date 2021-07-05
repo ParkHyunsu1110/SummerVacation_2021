@@ -43,5 +43,9 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 
+<<<<<<< HEAD
     implementation 'com.github.PhilJay:MpAndroidChart:v3.0.2'
+=======
+    compile 'com.github.PhilJay:MpAndroidChart:v3.0.2'
+>>>>>>> fc4384eeb6da6749e7c94b09ad18477d79b87c92
 }

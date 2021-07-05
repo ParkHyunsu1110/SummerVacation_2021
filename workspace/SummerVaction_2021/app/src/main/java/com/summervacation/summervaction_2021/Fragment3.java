@@ -38,7 +38,11 @@ public class Fragment3 extends Fragment {
 
     TextView mTxtDate;
 
+<<<<<<< HEAD
     Button btnnow3;
+=======
+    Button btnnow3, kindBtn, saveBtn;
+>>>>>>> fc4384eeb6da6749e7c94b09ad18477d79b87c92
 
     @Nullable
     @Override

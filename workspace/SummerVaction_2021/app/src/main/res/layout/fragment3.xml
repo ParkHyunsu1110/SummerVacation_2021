@@ -5,11 +5,19 @@
     android:layout_height="match_parent">
 
     <LinearLayout
+<<<<<<< HEAD
         android:orientation="horizontal"
         android:layout_marginLeft="110dp"
         android:layout_marginTop="10dp"
         android:layout_height="wrap_content"
         android:layout_width="wrap_content">
+=======
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginLeft="110dp"
+        android:layout_marginTop="10dp">
+>>>>>>> fc4384eeb6da6749e7c94b09ad18477d79b87c92
 
         <Button
             android:id="@+id/btnNow3"
@@ -17,6 +25,10 @@
             android:layout_height="wrap_content"
             android:text="날짜: " />
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> fc4384eeb6da6749e7c94b09ad18477d79b87c92
         <TextView
             android:id="@+id/text3"
             android:layout_width="wrap_content"
@@ -27,9 +39,17 @@
     </LinearLayout>
 
     <com.github.mikephil.charting.charts.PieChart
+<<<<<<< HEAD
         android:id="@+id/piechart"
         android:layout_width="match_parent"
         android:layout_height="500dp"
         android:layout_alignParentBottom="true"></com.github.mikephil.charting.charts.PieChart>
+=======
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/piechart">
+
+    </com.github.mikephil.charting.charts.PieChart>
+>>>>>>> fc4384eeb6da6749e7c94b09ad18477d79b87c92
 
 </RelativeLayout>
