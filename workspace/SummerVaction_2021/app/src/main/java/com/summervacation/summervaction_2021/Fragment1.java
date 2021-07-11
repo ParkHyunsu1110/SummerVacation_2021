@@ -27,7 +27,7 @@ public class Fragment1 extends Fragment {
 
     TextView mTxtDate;
 
-    Button nowBtn, kindBtn, saveBtn;
+    private Button nowBtn, kindBtn, saveBtn;
 
     @Nullable
     @Override
