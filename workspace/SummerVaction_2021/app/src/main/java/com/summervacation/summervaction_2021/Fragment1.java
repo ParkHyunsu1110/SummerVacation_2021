@@ -7,27 +7,39 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.os.*;
 import android.view.*;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
+import android.widget.EditText;
+import android.widget.ListView;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import androidx.annotation.*;
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import java.text.SimpleDateFormat;
 import java.util.*;
 
-public class Fragment1 extends Fragment {
+public class Fragment1 extends Fragment{
 
     //변수 목록
     Context ct;
+    EditText log, coast;
 
     ViewGroup viewGroup;
+    RadioGroup choice;
 
     TextView mTxtDate;
+    ListView listView;
+
+    String inputStr, state;
 
     private Button nowBtn, kindBtn, saveBtn;
+    RadioButton input, output;
 
     @Nullable
     @Override
@@ -36,11 +48,20 @@ public class Fragment1 extends Fragment {
         ct = container.getContext();
 
         //할당
+        choice = viewGroup.findViewById(R.id.choice);
+
         mTxtDate = viewGroup.findViewById(R.id.text);
+        listView = viewGroup.findViewById(R.id.listView);
 
         nowBtn = viewGroup.findViewById(R.id.btnNow);
         kindBtn = viewGroup.findViewById(R.id.kindBtn);
         saveBtn = viewGroup.findViewById(R.id.saveBtn);
+
+        input = viewGroup.findViewById(R.id.input);
+        output = viewGroup.findViewById(R.id.output);
+
+        log = viewGroup.findViewById(R.id.log);
+        coast = viewGroup.findViewById(R.id.coast);
 
         //DatePicker
         Calendar c = Calendar.getInstance();
@@ -73,6 +94,17 @@ public class Fragment1 extends Fragment {
             }
         });
 
+        //라디오 버튼
+        choice.clearCheck();    //클릭된 것이 있다면 지우기.
+
+        choice.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
+            @Override
+            public void onCheckedChanged(RadioGroup radioGroup, int i) {
+                if( i == R.id.input) state = "입금";
+                else if( i == R.id.output) state = "출금";
+            }
+        });
+
         //종류 버튼
         kindBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -94,6 +126,23 @@ public class Fragment1 extends Fragment {
                 }).create().show();
             }
         });
+
+        final ArrayList<String> arrayList = new ArrayList<String>();
+        final ArrayAdapter adapter = new ArrayAdapter(getActivity(), android.R.layout.simple_list_item_1, arrayList) ;
+
+        listView.setAdapter(adapter);
+
+        //저장버튼
+        saveBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                if(state == "입금" || state == "출금"){
+                    inputStr = state + mTxtDate.getText().toString() + " | " +  log.getText().toString() + " | " + coast.getText().toString() + " 원";
+                    arrayList.add(inputStr);
+                }
+            }
+        });
+
 
         //지우면 안됨!!
         return viewGroup;
