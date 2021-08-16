@@ -27,9 +27,9 @@
     </LinearLayout>
 
     <com.github.mikephil.charting.charts.PieChart
-    android:id="@+id/piechart"
-    android:layout_width="match_parent"
-    android:layout_height="500dp"
-    android:layout_alignParentBottom="true" />
+        android:id="@+id/piechart"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_alignParentBottom="true" />
 
 </RelativeLayout>

@@ -85,14 +85,6 @@ public class Fragment4 extends Fragment {
                 }
             }
         });
-        
-        return viewGroup;
-    }
-
-    @Override
-    public void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.fragment4);
 
         lineChart = (LineChart) viewGroup.findViewById(R.id.chart);
 
@@ -144,6 +136,8 @@ public class Fragment4 extends Fragment {
         marker.setChartView(lineChart);
         lineChart.setMarker(marker);
 
+
+        return viewGroup;
     }
 
     private void setContentView(int fragment4) {
