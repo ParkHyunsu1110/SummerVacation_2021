@@ -77,13 +77,13 @@
             android:layout_height="wrap_content">
 
             <RadioButton
-                android:id="@+id/input"
+                android:id="@+id/input1"
                 android:layout_width="111dp"
                 android:layout_height="wrap_content"
                 android:text="입금" />
 
             <RadioButton
-                android:id="@+id/output"
+                android:id="@+id/output1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="출금" />

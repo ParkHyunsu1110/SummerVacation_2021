@@ -30,13 +30,15 @@ import java.util.Date;
 import java.util.Locale;
 
 public class Fragment3 extends Fragment {
-    ViewGroup viewGroup;
-    PieChart pieChart;
 
     //변수 목록
     Context ct;
 
     TextView mTxtDate;
+
+    ViewGroup viewGroup;
+
+    PieChart pieChart;
 
     Button btnnow3;
 

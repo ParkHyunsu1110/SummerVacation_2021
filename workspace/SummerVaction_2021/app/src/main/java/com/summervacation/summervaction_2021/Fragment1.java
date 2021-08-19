@@ -38,8 +38,8 @@ public class Fragment1 extends Fragment{
 
     String inputStr, state;
 
-    private Button nowBtn, kindBtn, saveBtn;
-    RadioButton input, output;
+    Button nowBtn, kindBtn, saveBtn;
+    RadioButton input1, output1;
 
     @Nullable
     @Override
@@ -57,8 +57,8 @@ public class Fragment1 extends Fragment{
         kindBtn = viewGroup.findViewById(R.id.kindBtn);
         saveBtn = viewGroup.findViewById(R.id.saveBtn);
 
-        input = viewGroup.findViewById(R.id.input);
-        output = viewGroup.findViewById(R.id.output);
+        input1 = viewGroup.findViewById(R.id.input1);
+        output1 = viewGroup.findViewById(R.id.output1);
 
         log = viewGroup.findViewById(R.id.log);
         coast = viewGroup.findViewById(R.id.coast);
@@ -96,12 +96,11 @@ public class Fragment1 extends Fragment{
 
         //라디오 버튼
         choice.clearCheck();    //클릭된 것이 있다면 지우기.
-
         choice.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener(){
             @Override
             public void onCheckedChanged(RadioGroup radioGroup, int i) {
-                if( i == R.id.input) state = "입금";
-                else if( i == R.id.output) state = "출금";
+                if( i == R.id.input1) state = "입금";
+                else if( i == R.id.output1) state = "출금";
             }
         });
 
@@ -136,9 +135,13 @@ public class Fragment1 extends Fragment{
         saveBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if(state == "입금" || state == "출금"){
+                if((state == "입금" || state == "출금") && (mTxtDate.length() != 0) && (log.getText() != null) && (coast.getText() != null)){
+                    Toast.makeText(getContext(), "사용 내역 갱신", Toast.LENGTH_SHORT).show();
                     inputStr = state + mTxtDate.getText().toString() + " | " +  log.getText().toString() + " | " + coast.getText().toString() + " 원";
                     arrayList.add(inputStr);
+                }
+                else{
+                    Toast.makeText(getContext(), "갱신 오류! 입력 정보를 확인해 주세요!", Toast.LENGTH_SHORT).show();
                 }
             }
         });
