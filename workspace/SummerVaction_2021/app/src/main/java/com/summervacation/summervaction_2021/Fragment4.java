@@ -153,11 +153,11 @@ public class Fragment4 extends Fragment {
             @Override
             public void onClick(View view) {
                 ArrayList<Entry> entries2 = new ArrayList<>();
-                entries2.add(new Entry(1, 1));
-                entries2.add(new Entry(2, 2));
-                entries2.add(new Entry(3, 0));
-                entries2.add(new Entry(4, 4));
-                entries2.add(new Entry(5, 3));
+                entries2.add(new Entry(1, 8));
+                entries2.add(new Entry(2, 4));
+                entries2.add(new Entry(3, 5));
+                entries2.add(new Entry(4, 0));
+                entries2.add(new Entry(5, 7));
 
                 LineDataSet lineDataSet2 = new LineDataSet(entries2, "속성명1");
                 lineDataSet2.setLineWidth(2);
